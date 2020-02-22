@@ -38,9 +38,9 @@ entry_points:
 
 ### That's it for creating the project. Now lets see how we can run the project and visualize logs defined by us, using MLflow UI.
 
-* Run `MLflow run .` command inside your project folder. It will create the environment specified by you and executes the steps defined by you in your `MLproject` file.
+* Run `mlflow run .` command inside your project folder. It will create the environment specified by you and executes the steps defined by you in your `MLproject` file.
 
-* Run `MLflow ui` to see all the logs of parameters and hyperparameters, versions, metrics and artifacts(e.g. model.pkl).
+* Run `mlflow ui` to see all the logs of parameters and hyperparameters, versions, metrics and artifacts(e.g. model.pkl).
 
 ### Now your model is ready to serve. Here is how you can serve your model.
 
@@ -74,7 +74,9 @@ Examples:
 ### Dockerize your model
 
 Step 1: In the root directory create a `dockerfile` and specify your environment.
+<br>
 Step 2: Build the docker image and give a name.
+<br>
 Step 3: In the `MLproject` file define environment as follows:
 ```
 name: docker-example
@@ -93,7 +95,7 @@ entry_points:
 
 Step 4: Now you can run project using `mlflow run` command.
 
-N.B When we run `mlflow run` it will create a docker image which includes code and all the requirements of our environments and the image 
+N.B When we run `mlflow run .` it will create a docker image which includes code and all the requirements of our environments and the image 
 will be tagged as `mlflow-docker-example-<git-version>`. After the image is built MLflow executes the entry point (specified in `MLproject` file) within the container using `docker run`.
 
 Dockerization of model gives us the flexibility of including non-Python dependencies in our environments unlike conda environment.
