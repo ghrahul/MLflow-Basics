@@ -20,8 +20,6 @@ dependencies:
     - mlflow
 ```
 
-N.B. You can also create [docker environment](https://www.mlflow.org/docs/latest/projects.html#project-environments)
-
 Step 3: Create a` MLproject` file in the root directory to specify your project. Here you can specify your environment, entry point and also many things for defining your project workflow. For example
 
 ```
@@ -73,7 +71,30 @@ Examples:
 * [Multi-step workflow](https://github.com/mlflow/mlflow/tree/master/examples/multistep_workflow)
 
 
-### To be continued
+### Dockerize your model
+
+Step 1: In the root directory create a `dockerfile` and specify your environment.
+Step 2: Build the docker image and give a name.
+Step 3: In the `MLproject` file define environment as follows:
+```
+name: docker-example
+
+docker_env:
+  image:  mlflow-docker-example
+
+entry_points:
+  main:
+    parameters:
+      alpha: float
+      l1_ratio: {type: float, default: 0.1}
+    command: "python train.py --alpha {alpha} --l1-ratio {l1_ratio}"
+
+```
+
+Step 4: Now you can run project using `mlflow run` command.
+
+N.B When we run `mlflow run` it will create a docker image which includes code and all the requirements of our environments and the image 
+will be tagged as `mlflow-docker-example-<git-version>`. After the image is built MLflow executes the entry point (specified in `MLproject` file) within the container using `docker run`.
 
 ## References
 [MLflow docs](https://mlflow.org/docs/latest/index.html)
