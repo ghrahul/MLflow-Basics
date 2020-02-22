@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/Rahul%20Ghosh/OneDrive%20-%20Thoucentric/MLFLOW/MY%20WORK/MLflow-Basics/project%20folder/mlruns/0/3bb5b96191694b1dadffcff1824faeaf/artifacts
+end_time: 1582399222875
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+name: ''
+run_id: 3bb5b96191694b1dadffcff1824faeaf
+run_uuid: 3bb5b96191694b1dadffcff1824faeaf
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1582399222102
+status: 3
+tags: []
+user_id: Rahul Ghosh
