@@ -4,6 +4,8 @@
 
 Step 1: Install MLflow by ```pip install MLflow.
                             ```
+
+<br>                            
 Step 2: Create a `conda.yaml` file to give all the requirements of the environment on which you want to work. For example
 ```
 name: nameofenvironment
@@ -35,7 +37,7 @@ entry_points:
 
 ```
 
-### That's it for creating the project. Now lets see how we can run the project and visualize logs defined by us using MLflow UI.
+### That's it for creating the project. Now lets see how we can run the project and visualize logs defined by us, using MLflow UI.
 
 * Run `MLflow run .` command inside your project folder. It will create the environment specified by you and executes the steps defined by you in your `MLproject` file.
 
@@ -61,6 +63,20 @@ N.B. You can create multiple experiments to compare model performance by the fol
 mlflow experiments create --experiment-name="name"
 
 ```
+
+* For hyparameter tuning or multi step workflow we can always configure the `MLproject` file and run different experiments.
+
+Examples:
+
+* [Hyperparameter Tuning](https://github.com/mlflow/mlflow/tree/master/examples/hyperparam)
+* [Multi-step workflow](https://github.com/mlflow/mlflow/tree/master/examples/multistep_workflow)
+
+
+### To be continued
+
+
+
+
 
 
 
