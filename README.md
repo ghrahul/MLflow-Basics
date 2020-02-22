@@ -96,8 +96,13 @@ Step 4: Now you can run project using `mlflow run` command.
 N.B When we run `mlflow run` it will create a docker image which includes code and all the requirements of our environments and the image 
 will be tagged as `mlflow-docker-example-<git-version>`. After the image is built MLflow executes the entry point (specified in `MLproject` file) within the container using `docker run`.
 
+Dockerization of model gives us the flexibility of including non-Python dependencies in our environments unlike conda environment.
+
+
 ## References
 [MLflow docs](https://mlflow.org/docs/latest/index.html)
+
+
 
 
 
