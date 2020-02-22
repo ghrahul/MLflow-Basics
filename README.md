@@ -4,9 +4,10 @@
 
 Step 1: Install MLflow by ```pip install MLflow.
                             ```
+<br>
 
-<br>                            
 Step 2: Create a `conda.yaml` file to give all the requirements of the environment on which you want to work. For example
+
 ```
 name: nameofenvironment
 channels:
@@ -73,6 +74,10 @@ Examples:
 
 
 ### To be continued
+
+## References
+[MLflow docs](https://mlflow.org/docs/latest/index.html)
+
 
 
 
