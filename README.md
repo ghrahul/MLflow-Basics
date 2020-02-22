@@ -2,7 +2,7 @@
 
 ### How to create projects in MLflow
 
-Step 1: Install MLflow by ```pip install MLflow.
+Step 1: Install MLflow by ```pip install mlflow.
                             ```
 <br>
 
